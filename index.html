@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulário</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="box">
+   <form action="#" method="get">
+     <fieldset>
+       <legend><b>Formulário de Clientes</b></legend><br>
+             <div class="inputBox">
+                 <input type="text" name="nome" id="nome" class="inputUser" maxlength="40"  required>
+                 <label for="nome"class="labelInput">Nome completo </label>
+             </div>
+       <br><br>
+              <div class="inputBox">
+                 <input type="text" name="email" id="email" class="inputUser" maxlength="25" required>
+                 <label for="nome"class="labelInput">Email</label>
+             </div>
+             <br></br>
+             <div class="inputBox">
+                 <input type="number" name="telefone" id="telefone" class="inputUser" required>
+                 <label for="nome"class="labelInput">Telefone</label>
+             </div>
+             <br><br>
+         <p>Sexo:</p>
+         <input type="radio" id="feminino" name="gênero" value="feminino" required>
+         <label for="feminino">Feminino</label>
+         <input type="radio" id="masculino" name="gênero" value="masculino" required>
+         <label for="masculino">Masculino</label>
+         <input type="radio" id="prefiro não dizer" name="gênero" value="prefiro não dizer" required>
+         <label for="prefiro não dizer">Prefiro não dizer</label>
+         <br><br>
+         <label for="name data_nascimento"><b>Data de nascimento</b></label>
+         <input type="date" name="data_nascimento" id="data_nascimento" required>
+           <br><br> <br>
+             <div class="inputBox">
+                  <input type="text" name="Cidade" id="Cidade" class="inputUser" maxlength="15" required>
+                  <label for="cidade"class="labelInput">Cidade</label>
+             </div>
+                      <br></br>
+             <div class="inputBox">
+                  <input type="text" name="Estado" id="Estado" class="inputUser" maxlength="15" required>
+                  <label for="estado" class="labelInput">Estado</label></label>
+             </div>
+        <br><br>
+              <div class="inputBox">
+                 <input type="text" name="endereço" id="endereço" class="inputUser" maxlength="20" required>
+                 <label for="endereço"class="labelInput">Endereço</label>
+            </div>
+        <br></br>
+             <button type="submit" id="button" onclick="botaoenviar()">ENVIAR</button>
+     </fieldset>
+   </form>
+ </div>
+<script  language=javascript type="text/javascript">
+	  function botaoenviar(){
+    var nome = document.getElementById("nome").value;
+    var email = document.getElementById("email").value;
+    var Cidade = document.getElementById("Cidade").value;
+
+  if((nome=="") && (email=="")){
+      return
+      }else{
+      alert("Formulario Enviado com Sucesso!");
+}
+}
+</script>
+</body>
+</html>
